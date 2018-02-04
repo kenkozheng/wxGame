@@ -1317,6 +1317,11 @@
 	      myHeader[header] = value
 	      _requestHeader.set(this, myHeader)
 	    }
+	  }, {
+		  key: 'addEventListener',
+		  value: function (event, callback) {
+			  this['on' + event] = callback;
+		  }
 	  }])
 
 	  return XMLHttpRequest
